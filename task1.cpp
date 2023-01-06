@@ -1,15 +1,22 @@
-#include <iostream>
+#include<iostream>
+#include<windows.h>
 using namespace std;
-int num1,num2,sum;
-main(){
-cout<<"Enter 1st number:";
-cin>>num1;
-cout<<"Enter 2nd number:";
-cin>>num2;
-sum=num1+num2;
-cout<<"Answer is:"<<sum;
 
+void gotoxy(int x, int y)
+{
+ COORD coordinates;
+ coordinates.X=x;
+ coordinates.Y=y;
+ SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
+}
 
+int main()
+{
+cout<<"Test";
 
+gotoxy(15,15);
+cout<<"My name is Hassan Subhan";
+
+return 0;
 
 }

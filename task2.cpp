@@ -1,22 +1,43 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
-void add();
-main(){
+void gotoxy(int x, int y);
+void printMaze();
 
-add();
-add();
+main()
+{
+ system("cls");
+ printMaze();
+
+}
+void printMaze()
+{
+
+cout <<"##################################################"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"#                                                #"<<endl;
+cout <<"##################################################"<<endl;
+
 
 }
 
-void add(){
-int num1,num2,sum;
-cout<<"Enter 1st number:";
-cin>>num1;
-cout<<"Enter 2nd number:";
-cin>>num2;
-sum=num1+num2;
-cout<<"sum:"<<sum<<endl;
-
-
+void gotoxy(int x, int y)
+{
+ COORD coordinates;
+ coordinates.X=x;
+ coordinates.Y=y;
+ SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
 
 }

@@ -13,25 +13,19 @@ main()
  int y=3;
  while(true)
        {     playerMove(x,y);
-            if(x < 49)
-           {   x = x+1;
+            if(y < 14)
+           {   y= y+1;
                        }
-            if(x == 49)
+            if(y== 14)
           {  
-            gotoxy(x-1,y);
+            gotoxy(x,y-1);
             cout << " ";
-            x=3;
+            y=3;
           }
-
+         
 
       }   
-            
-
-
-
-
-
-
+           
 }
 void printMaze()
 {
@@ -67,13 +61,9 @@ void gotoxy(int x, int y)
 
 void playerMove(int x, int y)
 {
-     gotoxy(x-1,y);
+     gotoxy(x,y-1);
      cout<< " ";
      gotoxy(x,y);
      cout<< "P";
-     Sleep(200);
-
+     Sleep(100);
 }
-
-
-
